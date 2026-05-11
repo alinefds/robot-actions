@@ -41,6 +41,7 @@ jobs:
 
     - name: Robot Reporter
       uses: joonvena/robotframework-reporter-action@v2.4
+      if: always()
       with:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
         report_path: logs
@@ -49,6 +50,7 @@ jobs:
 
     - name: Upload Report
       uses: actions/upload-pages-artifact@v5.0.0
+      if: always()
       with:
         name: Tests report
         path: logs  
