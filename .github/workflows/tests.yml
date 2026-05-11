@@ -46,3 +46,11 @@ jobs:
         report_path: logs
         summary: true
         only_summary: true
+
+    - name: Upload Report
+      uses: actions/upload-pages-artifact@v5.0.0
+      with:
+        name: Tests report
+        path: logs  
+
+  
